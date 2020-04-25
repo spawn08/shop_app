@@ -1,0 +1,4 @@
+class DrawerModel{
+  String text;
+
+}
