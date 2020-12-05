@@ -51,7 +51,7 @@ class Category extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(0.0,0.0,5.0,0.0),
+      padding: const EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 0.0),
       child: InkWell(
         onTap: () {},
         child: Container(
@@ -64,7 +64,10 @@ class Category extends StatelessWidget {
               ),
               subtitle: Container(
                 alignment: Alignment.topCenter,
-                child: Text(imageCaption, style: TextStyle(fontSize: 15.0),),
+                child: Text(
+                  imageCaption,
+                  style: TextStyle(fontSize: 15.0),
+                ),
               )),
         ),
       ),
