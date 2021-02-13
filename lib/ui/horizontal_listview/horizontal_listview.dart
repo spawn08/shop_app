@@ -52,23 +52,31 @@ class Category extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 0.0),
-      child: InkWell(
-        onTap: () {},
-        child: Container(
-          width: 110.0,
-          child: ListTile(
-              title: Image.asset(
-                imageLocation,
-                width: 100.0,
-                height: 80.0,
-              ),
-              subtitle: Container(
-                alignment: Alignment.topCenter,
-                child: Text(
-                  imageCaption,
-                  style: TextStyle(fontSize: 15.0),
+      child: Card(
+        color: Colors.purple[400],
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        elevation: 8.0,
+        shadowColor: Colors.grey[300],
+        child: InkWell(
+          onTap: () {},
+          child: Container(
+            width: 110.0,
+            child: ListTile(
+                title: Image.asset(
+                  imageLocation,
+                  width: 100.0,
+                  height: 80.0,
+                  color: Colors.white,
                 ),
-              )),
+                subtitle: Container(
+                  alignment: Alignment.topCenter,
+                  child: Text(
+                    imageCaption,
+                    style: TextStyle(fontSize: 15.0, color: Colors.white),
+                  ),
+                )),
+          ),
         ),
       ),
     );

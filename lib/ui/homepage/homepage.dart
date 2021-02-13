@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
     );
 
     return Scaffold(
-      appBar: new AppBar(
+      appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.red,
         centerTitle: true,
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      drawer: new Drawer(
+      drawer: Drawer(
         child: ListView(
           children: <Widget>[
             new UserAccountsDrawerHeader(
@@ -152,17 +152,23 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: new ListView(
+      body: ListView(
         children: <Widget>[
           img_carousel,
           new Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Categories"),
+            child: Text(
+              "Categories",
+              style: TextStyle(color: Colors.black, fontSize: 18.0),
+            ),
           ),
           HorizontalListView(),
           new Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Recent Products"),
+            child: Text(
+              "Recent Products",
+              style: TextStyle(color: Colors.black, fontSize: 18.0),
+            ),
           ),
           Container(
             height: 320,
