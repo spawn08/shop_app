@@ -107,16 +107,30 @@ class SingleProduct extends StatelessWidget {
                 footer: Container(
                   color: Colors.white70,
                   child: ListTile(
-                    leading: Text(
-                      name,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    title: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            name,
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Text("\$$price",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w800,
+                                    color: Colors.red)),
+                            Text("\$$oldPrice",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w800,
+                                    color: Colors.black54,
+                                    decoration: TextDecoration.lineThrough))
+                          ],
+                        ),
+                      ],
                     ),
-                    title: Text("\$$price",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w800, color: Colors.red)),
-                    subtitle: Text("\$$oldPrice",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w800, color: Colors.black54, decoration: TextDecoration.lineThrough)),
                   ),
                 ),
                 child: Image.asset(
